@@ -1,14 +1,22 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      CSV Data
     </ion-title>
+    <ion-buttons end>
+      <button ion-button full icon-only (click) = "downloadCSV()">
+        <ion-icon name="download"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-scroll scrollX = "true" scrollY = "true" class="data-scroll">
+    <table border="1" class="data-table">
+      <tr>
+        <td *ngFor = "let header of headerRow" text-center></td>
+      </tr>
+    </table>
+  </ion-scroll>
 </ion-content>
