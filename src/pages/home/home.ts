@@ -25,7 +25,7 @@ export class HomePage {
   }
 
   private extractData(res) {
-    let csvData = res['body'] || '';
+    let csvData = res['_body'] || '';
     let parseData = papa.parse(csvData).data;
 
     this.headerRow = parseData[0];

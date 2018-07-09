@@ -1,3 +1,15 @@
 page-home {
-
+    .data-scroll {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .data-table {
+        min-width: 800px; 
+    }
+    .data-table td {
+        text-align: center;
+    }
 }

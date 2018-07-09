@@ -15,7 +15,12 @@
   <ion-scroll scrollX = "true" scrollY = "true" class="data-scroll">
     <table border="1" class="data-table">
       <tr>
-        <td *ngFor = "let header of headerRow" text-center></td>
+        <td *ngFor = "let header of headerRow" text-center>{{ header }}</td>
+      </tr>
+      <tr *ngFor = "let csv of csvData; let i= index">
+        <td *ngFor = "let data of csv; let j = index; trackBy: trackByFn" >
+          <ion-input type="text" [(ngModel)] = "csvData[i][j]" text-center></ion-input>
+        </td>
       </tr>
     </table>
   </ion-scroll>
